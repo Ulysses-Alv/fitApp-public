@@ -17,3 +17,14 @@ Descargá la última versión del instalador APK directamente desde la sección 
 1. Bajá el archivo APK más reciente a tu teléfono.
 2. Si Android te lo pide, habilitá el permiso para instalar aplicaciones desde fuentes desconocidas en tu navegador o gestor de archivos.
 3. Abrí el archivo descargado para completar la instalación.
+
+## Aclaración sobre el proyecto
+
+Esta app fue desarrollada para uso personal y como experimento:
+
+1. Fue conejillo de indias para probar las capacidades de Gemini 3.7 Flash.
+2. Está armada casi en su totalidad con prompts "one-shot" (prompts extensos resolviendo varias funcionalidades de un tirón).
+3. No tiene fines comerciales ni soporte formal.
+4. Está hecha a mi medida: quería una herramienta rápida, directa y simple para entrenar hipertrofia mientras testeaba el modelo.
+
+Si te es útil para tus entrenamientos, bienvenido sea. Si no te convence el diseño, el enfoque o no se ajusta a lo que buscás, no te preocupes: está pensada para mi propio uso diario y no pretende ser un producto para todo el mundo.
