@@ -1,30 +1,89 @@
-﻿# FitApp
+# FitApp
 
-FitApp es una aplicación Android local-first diseñada para el registro y análisis de entrenamientos de fuerza, hipertrofia y sobrecarga progresiva. Funciona al 100% sin conexión, pensada para entrenar en el gimnasio sin depender de señal ni suscripciones.
+**FitApp** is a local-first Android application for tracking and analyzing strength and hypertrophy training.
 
-## Qué ofrece
+It started as a personal tool: I wanted a fast, offline-first workout tracker that matched the way I actually train instead of adapting my workflow to a generic fitness app. Over time, it evolved into a larger engineering project focused on progressive overload, training analytics, exercise selection, personal records, and long-term performance trends.
 
-- Funcionamiento offline total: catálogo completo con más de 1.300 ejercicios y animaciones GIF integradas directamente en la app.
-- Registro rápido en sala: carga ágil de series, repeticiones, peso y RIR (repeticiones en reserva), con temporizador de descanso en primer plano.
-- Progresión y analítica: cálculo de 1RM estimado (fórmula Epley), detección automática de récords personales (PR) y comparativa directa contra tus marcas de la sesión anterior.
-- Análisis muscular y métricas: distribución de volumen por grupo muscular y seguimiento de medidas corporales.
-- Privacidad y sincronización opcional: tus datos quedan guardados en tu dispositivo, con respaldo opcional en la nube para sincronizar entre dispositivos.
+> This repository is the **public showcase and release channel** for FitApp.  
+> The main application source code is kept private.
 
-## Descarga e instalación
+## What it does
 
-Descargá la última versión del instalador APK directamente desde la sección de [Releases](https://github.com/Ulysses-Alv/fitApp-public/releases).
+- **Offline-first workout tracking** — log sets, repetitions, weight and RIR without requiring an internet connection.
+- **1,300+ exercise catalog** with locally bundled exercise data and animations.
+- **Progressive overload analytics** with estimated 1RM, historical comparisons and trend analysis.
+- **Personal Record detection** across multiple PR categories, including weight, repetitions at a given load, estimated 1RM and set volume.
+- **Training volume analysis** with effective-set and muscle-group tracking.
+- **Period comparisons** to evaluate whether performance is improving, stable or declining across training blocks.
+- **Routine generation and exercise replacement** using training context, exercise characteristics and user constraints.
+- **Body measurement tracking** and historical comparison.
+- **Optional cloud synchronization** while keeping the application usable offline.
+- **In-app update flow** backed by GitHub Releases.
 
-1. Bajá el archivo APK más reciente a tu teléfono.
-2. Si Android te lo pide, habilitá el permiso para instalar aplicaciones desde fuentes desconocidas en tu navegador o gestor de archivos.
-3. Abrí el archivo descargado para completar la instalación.
+## Engineering highlights
 
-## Aclaración sobre el proyecto
+FitApp is not just a collection of screens around a workout database. A large part of the project is a domain layer dedicated to training analysis.
 
-Esta app fue desarrollada para uso personal y como experimento:
+Examples include:
 
-1. Fue conejillo de indias para probar las capacidades de Gemini 3.7 Flash.
-2. Está armada casi en su totalidad con prompts "one-shot" (prompts extensos resolviendo varias funcionalidades de un tirón).
-3. No tiene fines comerciales ni soporte formal.
-4. Está hecha a mi medida: quería una herramienta rápida, directa y simple para entrenar hipertrofia mientras testeaba el modelo.
+- Policy-based **e1RM estimation** with an Epley implementation.
+- Dedicated engines for:
+  - exercise performance analysis,
+  - personal record detection,
+  - volume analysis,
+  - period comparison,
+  - exercise transitions,
+  - progression evidence,
+  - training verdict synthesis.
+- Separation between **domain models, policies, estimators, repositories and UI**.
+- Local-first repositories with optional Firebase-backed synchronization.
+- Exercise metadata represented through compact muscle-role bitmasks used by filtering, routine generation and recommendation logic.
+- Automated unit and integration coverage for the core analytics and training-domain logic.
 
-Si te es útil para tus entrenamientos, bienvenido sea. Si no te convence el diseño, el enfoque o no se ajusta a lo que buscás, no te preocupes: está pensada para mi propio uso diario y no pretende ser un producto para todo el mundo.
+The private codebase currently contains **40+ automated tests** covering areas such as progression analytics, e1RM estimation, PR detection, routine generation, measurements, synchronization and workout history.
+
+## Tech stack
+
+- **Kotlin**
+- **Android / Jetpack Compose**
+- **Gradle**
+- **Local-first persistence**
+- **Firebase Authentication / Firestore** for optional sync
+- **GitHub Releases** for distribution and in-app updates
+
+## Download
+
+The latest APK is available from the repository's [Releases](https://github.com/Ulysses-Alv/fitApp-public/releases) section.
+
+### Installation
+
+1. Download the latest APK from Releases.
+2. Allow installation from unknown sources if Android requests it.
+3. Open the APK and complete the installation.
+
+## Development approach
+
+FitApp has also been an experiment in **AI-assisted software development**.
+
+AI tools are used heavily during implementation, but the project is driven by explicit product requirements, domain rules, architecture decisions, iterative testing and manual validation. I define the behavior and constraints, review the generated implementation, reproduce failures, refine the design and maintain the application as a real tool that I use in my own training.
+
+The goal of the experiment is not to measure how much code an AI can generate in one prompt, but how effectively AI can be incorporated into a disciplined software-engineering workflow.
+
+## Project status
+
+FitApp is primarily built for my own training workflow and is not currently intended to be a commercial fitness product.
+
+That makes it a useful environment for experimenting with:
+
+- training analytics,
+- Android architecture,
+- offline-first product design,
+- domain modeling,
+- automated testing,
+- AI-assisted development workflows.
+
+If the app happens to fit your training style too, feel free to use the APK from Releases.
+
+---
+
+Built and maintained by **Ulises Alvarenga**.
