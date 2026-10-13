@@ -1,3 +1,6 @@
+> **Latest release: FitApp v0.21.0 (Build 46)** — [Download APK](https://github.com/Ulysses-Alv/fitApp-public/releases/download/v0.21.0/FitApp-v0.21.0.apk) · [Release notes](https://github.com/Ulysses-Alv/fitApp-public/releases/tag/v0.21.0)
+>
+> Install on Android 8.0 (API 26) or later. If prompted, allow your browser or file manager to install unknown apps.
 # FitApp
 
 **FitApp** is a local-first Android application for tracking and analyzing strength and hypertrophy training.
