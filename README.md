@@ -1,4 +1,4 @@
-> **Latest release: FitApp v0.21.0 (Build 46)** — [Download APK](https://github.com/Ulysses-Alv/fitApp-public/releases/download/v0.21.0/FitApp-v0.21.0.apk) · [Release notes](https://github.com/Ulysses-Alv/fitApp-public/releases/tag/v0.21.0)
+> **Latest release: FitApp v0.22.1 (Build 48)** — [Download APK](https://github.com/Ulysses-Alv/fitApp-public/releases/download/v0.22.1/FitApp-v0.22.1.apk) · [Release notes](https://github.com/Ulysses-Alv/fitApp-public/releases/tag/v0.22.1)
 >
 > Install on Android 8.0 (API 26) or later. If prompted, allow your browser or file manager to install unknown apps.
 # FitApp
@@ -30,18 +30,18 @@ FitApp is not just a collection of screens around a workout database. A large pa
 Examples include:
 
 - Policy-based **e1RM estimation** with an Epley implementation.
-- Dedicated engines for:
-  - exercise performance analysis,
-  - personal record detection,
+- **Primary editor for the dedicated engines for:
+-  - exercise performance analysis,
+-  - personal record detection,
   - volume analysis,
   - period comparison,
   - exercise transitions,
   - progression evidence,
   - training verdict synthesis.
-- Separation between **domain models, policies, estimators, repositories and UI**.
+- **Separation between **domain models, policies, estimators, repositories and UI**.
 - Local-first repositories with optional Firebase-backed synchronization.
-- Exercise metadata represented through compact muscle-role bitmasks used by filtering, routine generation and recommendation logic.
-- Automated unit and integration coverage for the core analytics and training-domain logic.
+- **Exercise metadata represented through compact muscle-role bitmasks used by filtering, routine generation and recommendation logic.
+- **Automated unit and integration coverage for the core analytics and training-domain logic.
 
 The private codebase currently contains **40+ automated tests** covering areas such as progression analytics, e1RM estimation, PR detection, routine generation, measurements, synchronization and workout history.
 
