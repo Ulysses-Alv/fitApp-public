@@ -1,4 +1,4 @@
-> **Latest release: FitApp v0.30.0 (Build 60)** — [Download APK](https://github.com/Ulysses-Alv/fitApp-public/releases/download/v0.30.0/FitApp-v0.30.0.apk) · [Release notes](https://github.com/Ulysses-Alv/fitApp-public/releases/tag/v0.30.0)
+> **Latest release: FitApp v0.31.0 (Build 61)** — [Download APK](https://github.com/Ulysses-Alv/fitApp-public/releases/download/v0.31.0/FitApp-v0.31.0.apk) · [Release notes](https://github.com/Ulysses-Alv/fitApp-public/releases/tag/v0.31.0)
 >
 > Install on Android 8.0 (API 26) or later. If prompted, allow your browser or file manager to install unknown apps.
 # FitApp
